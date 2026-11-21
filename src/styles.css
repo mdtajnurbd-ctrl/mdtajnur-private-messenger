@@ -1,1 +1,179 @@
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background: #1e293b;
+}
+
+.auth-card {
+  max-width: 380px;
+  margin: 80px auto;
+  padding: 28px;
+  background: #1e293b;
+  border-radius: 14px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+}
+
+button {
+  background: #2563eb;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.link {
+  background: none;
+  color: #60a5fa;
+}
+
+.error {
+  color: #f87171;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px;
+}
+
+.find-user {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chat-header button {
+  width: auto;
+  padding: 8px 12px;
+  margin-left: 6px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+}
+
+.message.mine {
+  align-self: flex-end;
+  background: #2563eb;
+}
+
+.message.theirs {
+  align-self: flex-start;
+  background: #334155;
+}
+
+.composer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.call-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.call-box {
+  width: min(900px, 95vw);
+  padding: 16px;
+  background: #111827;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.remote-video {
+  width: 100%;
+  height: 60vh;
+  background: black;
+  border-radius: 12px;
+}
+
+.local-video {
+  position: absolute;
+  right: 24px;
+  bottom: 120px;
+  width: 220px;
+  border-radius: 12px;
+  background: black;
+}
+
+.call-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.call-controls button {
+  width: auto;
+  padding: 10px 18px;
+}
+
+.danger {
+  background: #dc2626;
+}
